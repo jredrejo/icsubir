@@ -1,0 +1,9 @@
+RewriteEngine On
+# Forzar https:
+RewriteCond %{HTTP_HOST} ^ptest\.meridabadajoz\.net [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://ptest.meridabadajoz.net/$1 [R=301,L]
+
+# Todo al cgi-bin:
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /home/rbencrfm/public_html/ptest/cgi-bin/ptest2.py/$1 [L]

@@ -1,0 +1,82 @@
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+.cache
+.eggs
+*.egg
+*.egg-info
+dist
+dist-packages-temp
+dist-packages-cache
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+pip
+
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage*
+.tox
+nosetests.xml
+htmlcov/
+
+# Translations
+*.mo
+
+.project
+# vscode files
+.vscode
+# pycharm project file
+.pydevproject
+.venv
+.idea
+
+# Complexity
+output/*.html
+output/*/index.html
+
+# Sphinx
+docs/_build
+
+# node
+node_modules
+npm-debug.log
+
+# Node coverage data
+coverage
+
+# webpack built files
+js-dist
+
+# swap files
+*.swp
+
+# editor files
+*.sublime-project
+*.sublime-workspace
+
+# Content App
+storage/*
+
+# virtual environment
+venv/
+.python-version
+.envrc
+
+
+#ignore added files with DS_Store
+.DS_Store
+
