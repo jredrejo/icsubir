@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import os
 from flask import Flask, flash, render_template, redirect, request, jsonify, url_for, send_from_directory
 from flask_cors import CORS
@@ -5,12 +6,13 @@ from random import randint
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__,
-            static_folder="./dist/static",
-            template_folder="./dist")
-cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+            static_folder="./static",
+            template_folder="./templates")
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}, r"/upload*": {"origins": {"http://127.0.0.1:3000","http://localhost:3000"}}})
 app.config['UPLOAD_FOLDER'] = "../iglesiaencamino/"
 app.secret_key = 'super secret key'
 app.config['SESSION_TYPE'] = 'filesystem'
+# app.debug = True
 
 @app.route('/')
 def hello():
@@ -37,6 +39,7 @@ def hello_name(name):
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
+    import ipdb;ipdb.set_trace()
     if request.method == 'POST':
         # check if the post request has the file part
         if 'file' not in request.files:

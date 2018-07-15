@@ -52,8 +52,15 @@ output/*/index.html
 docs/_build
 
 # node
-node_modules
-npm-debug.log
+frontend/node_modules
+frontend/npm-debug.log
+frontend/package-lock.json
+# Nuxt build
+frontend/.nuxt
+
+# Nuxt generate
+frontend/dist
+frontend/yarn.lock
 
 # Node coverage data
 coverage
